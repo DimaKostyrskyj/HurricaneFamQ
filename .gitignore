@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Configuration
+config.json
+
+# Data
+data/
+*.json
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+tmp/
+temp/
