@@ -1,5 +1,5 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const config = require('../config.json');
+const config = require('../config.railway.js');
 const { canStartContract } = require('../utils/permissions');
 const { logContract } = require('../utils/logger');
 const fs = require('fs');

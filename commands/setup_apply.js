@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require('discord.js');
-const config = require('../config.json');
+const config = require('../config.railway.js');
 const { isAdmin } = require('../utils/permissions');
 
 module.exports = {

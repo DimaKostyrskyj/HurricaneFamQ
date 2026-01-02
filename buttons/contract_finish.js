@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const config = require('../config.json');
+const config = require('../config.railway.js');
 const { canFinishContract } = require('../utils/permissions');
 const { logContract } = require('../utils/logger');
 const fs = require('fs');

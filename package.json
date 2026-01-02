@@ -1,0 +1,21 @@
+{
+  "name": "hurricane-famq-bot",
+  "version": "1.0.0",
+  "description": "Discord bot для Hurricane FamQ - система заявок и контрактов для GTA 5 RP",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "gta5rp",
+    "hurricane"
+  ],
+  "author": "Kai",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.25.1"
+  }
+}

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const config = require('../config.json');
+const config = require('../config.railway.js');
 const { isAdmin } = require('../utils/permissions');
 const fs = require('fs');
 const path = require('path');
