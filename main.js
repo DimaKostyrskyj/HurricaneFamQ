@@ -1,7 +1,15 @@
 const { Client, GatewayIntentBits, Partials, Collection } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const config = require('./config.json');
+
+// Загружаем конфигурацию (поддержка Railway и локальной разработки)
+let config;
+try {
+    config = require('./config.railway.js');
+} catch (error) {
+    console.error('❌ Ошибка загрузки конфигурации:', error.message);
+    process.exit(1);
+}
 
 // Создаем клиент бота
 const client = new Client({
