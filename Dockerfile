@@ -1,11 +1,14 @@
+# Используем официальный образ Node.js 18
 FROM node:18-alpine
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install --production
-
+# Копируем ВСЕ файлы проекта
 COPY . .
 
+# Устанавливаем зависимости
+RUN npm install --omit=dev
+
+# Указываем команду запуска
 CMD ["node", "main.js"]
