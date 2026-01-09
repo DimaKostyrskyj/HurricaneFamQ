@@ -5,6 +5,21 @@ const { sendLog } = require('../utils/logger');
 module.exports = {
     name: 'guildMemberAdd',
     async execute(member, client) {
+        // Выдаем роль Guest новому участнику
+        try {
+            const guestRole = member.guild.roles.cache.get(config.roles.guest);
+            
+            if (guestRole) {
+                await member.roles.add(guestRole);
+                console.log(`✅ Роль Guest выдана пользователю ${member.user.tag}`);
+            } else {
+                console.error('❌ Роль Guest не найдена в конфигурации!');
+            }
+        } catch (error) {
+            console.error('❌ Ошибка при выдаче роли Guest:', error);
+        }
+        
+        // Отправляем приветственное сообщение в канал
         const welcomeChannel = member.guild.channels.cache.get(config.channels.welcome);
         
         if (!welcomeChannel) {

@@ -44,7 +44,8 @@ function loadConfig() {
             rec: process.env.ROLE_REC || fileConfig.roles?.rec,
             contract: process.env.ROLE_CONTRACT || fileConfig.roles?.contract,
             fam: process.env.ROLE_FAM || fileConfig.roles?.fam,
-            academy: process.env.ROLE_ACADEMY || fileConfig.roles?.academy,
+            academy: process.env.ROLE_ACADEMY || fileConfig.roles?.academy || '1454963713999245506',
+            guest: process.env.ROLE_GUEST || fileConfig.roles?.guest || '1454957599144284287',
         },
         
         colors: fileConfig.colors || {
